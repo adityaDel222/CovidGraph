@@ -55,7 +55,26 @@ const displayGraph = data => {
                 y2="${ data[i + 1].Cases / 150 }"
                 style="stroke: hsl(${ hue }, 50%, 50%); stroke-width: 2"
             />
+            <!--<polygon
+                points="
+                    ${ i * 3.85 },${ data[i].Cases / 150 }
+                    ${ (i + 1) * 3.85 },${ data[i + 1].Cases / 150 }
+                    ${ i * 3.85 },0
+                    ${ (i + 1) * 3.85 },0
+                "
+                style="fill:hsla(${ hue }, 50%, 50%, 0.5);stroke:#fff;stroke-width:1"
+            />-->
         `;
     }
+    htmlString += `
+        <polygon
+            points="
+                0,0
+                ${ (data.length - 1) * 3.85 },${ data[data.length - 1].Cases / 150 }
+                ${ (data.length - 1) * 3.85 },0
+            "
+            style="fill:hsla(${ hue }, 50%, 50%, 0.05);stroke:transparent;stroke-width:1"
+        />
+    `;
     document.getElementById('graph').innerHTML += htmlString;
 }

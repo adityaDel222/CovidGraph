@@ -5,6 +5,9 @@ body {
     margin: 0;
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
 }
+.graph {
+    transform: rotateX(180deg);
+}
 @media only screen and (max-width: 450px) {
     .container {
         display: flex;
