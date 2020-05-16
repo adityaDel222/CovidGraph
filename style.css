@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+@media only screen and (max-width: 450px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+    }
+    .graph {
+        width: 100%;
+        height: 100%;
+        transform: rotateX(180deg);
+    }
+}
